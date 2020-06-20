@@ -56,6 +56,15 @@ namespace WebApplication2.Controllers
         {
             return View();
         }
-       
+        public IActionResult Search(string employeeName)
+        {
+            EmployeeDal dal = new EmployeeDal();
+            List<EmployeeModel> search= (from temp in dal.EmployeeModels
+                                        where temp.name==employeeName
+                                        select temp)
+                                        .ToList<EmployeeModel>();
+            return Ok(search);
+        }
+
     }
 }

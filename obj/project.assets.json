@@ -12537,11 +12537,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\angular Training\\github\\WebApplication2\\WebApplication2\\WebApplication2.csproj",
+      "projectUniqueName": "F:\\angular Training\\Git\\WebApplication2\\WebApplication2.csproj",
       "projectName": "WebApplication2",
-      "projectPath": "F:\\angular Training\\github\\WebApplication2\\WebApplication2\\WebApplication2.csproj",
+      "projectPath": "F:\\angular Training\\Git\\WebApplication2\\WebApplication2.csproj",
       "packagesPath": "C:\\Users\\Praful\\.nuget\\packages\\",
-      "outputPath": "F:\\angular Training\\github\\WebApplication2\\WebApplication2\\obj\\",
+      "outputPath": "F:\\angular Training\\Git\\WebApplication2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
