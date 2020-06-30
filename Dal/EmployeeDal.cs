@@ -28,7 +28,7 @@ namespace WebApplication2.Dal
             
 
 
-        }
-        public DbSet<EmployeeModel> EmployeeModels { get; set; }
+         }
+         public DbSet<EmployeeModel> EmployeeModels { get; set; }
     }
 }
