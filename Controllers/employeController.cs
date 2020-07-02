@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,6 +12,7 @@ using WebApplication2.Models;
 
 namespace WebApplication2.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class employeController : ControllerBase
@@ -21,7 +23,7 @@ namespace WebApplication2.Controllers
        
         // GET: api/employe/5
         [HttpGet]
-        public IActionResult Get([FromBody] string employeeName)
+        public IActionResult Get(/*[FormBody]or[FromForm]*/[FromBody] string employeeName)
         {
             EmployeeDal dal = new EmployeeDal();
             List<EmployeeModel> search = (from temp in dal.EmployeeModels
