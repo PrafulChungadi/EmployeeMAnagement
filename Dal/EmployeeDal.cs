@@ -17,18 +17,31 @@ namespace WebApplication2.Dal
         {
             // what is your primary
             modelBuilder.Entity<EmployeeModel>().HasKey(p => p.id);
+            modelBuilder.Entity<Address>().HasKey(p => p.id);
             //identity yes or now
             modelBuilder.Entity<EmployeeModel>().Property(t => t.id)
                 .ValueGeneratedNever();
+
             // class maps with which table
             modelBuilder.Entity<EmployeeModel>()
                 .ToTable("tblEmployee");
+
+            modelBuilder.Entity<Address>()
+               .ToTable("tblAddress");
+
+            //1 to many
            
-            //Mapper. //Mapping
+                modelBuilder.Entity<EmployeeModel>()
+                    .HasMany(c => c.addresses)
+                    .WithOne(e => e.employee);
             
 
+            //Mapper. //Mapping
 
-         }
-         public DbSet<EmployeeModel> EmployeeModels { get; set; }
+
+
+        }
+        public DbSet<EmployeeModel> EmployeeModels { get; set; }
+ 
     }
 }

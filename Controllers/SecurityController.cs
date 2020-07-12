@@ -22,7 +22,7 @@ namespace WebApplication2.Controllers
         {
             // Key
             var securityKey = new SymmetricSecurityKey
-                (Encoding.UTF8.GetBytes("238420983409284098230948"));
+                (Encoding.UTF8.GetBytes("238420983409284098230949"));
             // Algorithm
             var credentials = new
                     SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
@@ -37,7 +37,7 @@ namespace WebApplication2.Controllers
             var token = new JwtSecurityToken("finishingschool",
                 "finishingschool",
                 claims,
-                expires: DateTime.Now.AddMinutes(120),
+                expires: DateTime.Now.AddMinutes(3000),
                 signingCredentials: credentials);
 
             string tokenstring = new JwtSecurityTokenHandler().WriteToken(token);

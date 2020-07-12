@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using WebApplication2.Dal;
 using WebApplication2.Models;
 
@@ -23,7 +24,7 @@ namespace WebApplication2.Controllers
        
         // GET: api/employe/5
         [HttpGet]
-        public IActionResult Get(/*[FormBody]or[FromForm]*/[FromBody] string employeeName)
+        public IActionResult Get(/*[FormBody]or[FromForm]*/ string employeeName)
         {
             EmployeeDal dal = new EmployeeDal();
             List<EmployeeModel> search = (from temp in dal.EmployeeModels
@@ -46,19 +47,20 @@ namespace WebApplication2.Controllers
             var isValid = Validator.TryValidateObject(obj, context, result, true);
 
             if (result.Count == 0)
-            {
+           {
                 EmployeeDal dal = new EmployeeDal();
                 dal.Database.EnsureCreated(); //<--tblEmployee  created
                 dal.Add(obj);
-                dal.SaveChanges();
+               
+                dal.SaveChanges(); //Physical commit
 
 
 
-                List<EmployeeModel> recs = dal.EmployeeModels.ToList<EmployeeModel>();
+                List<EmployeeModel> recs = dal.EmployeeModels.Include(emp =>emp.addresses).ToList<EmployeeModel>();
 
                 return StatusCode(200, recs); //200
             }
-            else
+           else
             {
                 return StatusCode(500, result);//500internal (error)
             }

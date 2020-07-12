@@ -69,7 +69,6 @@ F:\angular Training\Git\WebApplication2\bin\Debug\netcoreapp2.1\WebApplication2.
 F:\angular Training\Git\WebApplication2\bin\Debug\netcoreapp2.1\WebApplication2.pdb
 F:\angular Training\Git\WebApplication2\bin\Debug\netcoreapp2.1\WebApplication2.Views.dll
 F:\angular Training\Git\WebApplication2\bin\Debug\netcoreapp2.1\WebApplication2.Views.pdb
-F:\angular Training\Git\WebApplication2\obj\Debug\netcoreapp2.1\WebApplication2.csprojAssemblyReference.cache
 F:\angular Training\Git\WebApplication2\obj\Debug\netcoreapp2.1\WebApplication2.csproj.CoreCompileInputs.cache
 F:\angular Training\Git\WebApplication2\obj\Debug\netcoreapp2.1\WebApplication2.RazorAssemblyInfo.cache
 F:\angular Training\Git\WebApplication2\obj\Debug\netcoreapp2.1\WebApplication2.RazorAssemblyInfo.cs
@@ -94,3 +93,4 @@ F:\angular Training\Git\WebApplication2\obj\Debug\netcoreapp2.1\WebApplication2.
 F:\angular Training\Git\WebApplication2\obj\Debug\netcoreapp2.1\WebApplication2.dll
 F:\angular Training\Git\WebApplication2\obj\Debug\netcoreapp2.1\WebApplication2.pdb
 F:\angular Training\Git\WebApplication2\obj\Debug\netcoreapp2.1\WebApplication2.csproj.CopyComplete
+F:\angular Training\Git\WebApplication2\obj\Debug\netcoreapp2.1\WebApplication2.csprojAssemblyReference.cache

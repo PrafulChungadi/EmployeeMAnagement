@@ -42,7 +42,7 @@ namespace WebApplication2
                             ValidIssuer = "finishingschool",
                             ValidAudience = "finishingschool",
                             IssuerSigningKey = new
-                            SymmetricSecurityKey(Encoding.UTF8.GetBytes("238420983409284098230948"))
+                            SymmetricSecurityKey(Encoding.UTF8.GetBytes("238420983409284098230949"))
 
                         };
                 });
